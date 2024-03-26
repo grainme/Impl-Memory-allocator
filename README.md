@@ -20,3 +20,15 @@ Integrate the allocator functions (`m61_malloc`, `m61_free`, `m61_calloc`, `m61_
 - Multiple Buffers
 - Large Buffers
 - High-Performance Allocation
+
+## Personal Notes
+- The `alignof` operator gives you the alignment requirement of a given type (the size of the largest member, in case of struct)
+- Clearly, `sizeof(CounterExample)` is not equal to `alignof(CounterExample) * number_of_elements_in_struct`
+
+```Cpp
+struct CounterExample {
+    char a;      // Size: 1 byte
+    int b;       // Size: 4 bytes (assuming int is 4 bytes)
+    char c[3];   // Size: 3 bytes
+};
+```
