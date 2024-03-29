@@ -32,3 +32,4 @@ struct CounterExample {
     char c[3];   // Size: 3 bytes
 };
 ```
+- Properly aligned memory ensures that data can be accessed efficiently by the processor!
